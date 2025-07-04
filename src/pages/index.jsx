@@ -1,4 +1,4 @@
-import { Suspense } from "@/utils";
+import { Suspense } from "react";
 import React, { lazy } from "react";
 import { useRoutes } from "react-router-dom";
 import About from "./About/About";
@@ -7,7 +7,6 @@ import Contact from "./Contact/Contact";
 const Layout = lazy(() => import("./layout/Layout"));
 const Home = lazy(() => import("./home/Home"));
 const Shop = lazy(() => import("./shop/Shop"));
-const Wishlist = lazy(() => import("./wishlist/Wishlist"));
 
 const MainRouters = () => {
   return (
@@ -37,14 +36,7 @@ const MainRouters = () => {
                 </Suspense>
               ),
             },
-            {
-              path: "/wishlist",
-              element: (
-                <Suspense>
-                  <Wishlist />
-                </Suspense>
-              ),
-            },
+
             {
               path: "/about",
               element: (
