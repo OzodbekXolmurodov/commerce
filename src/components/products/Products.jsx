@@ -18,7 +18,7 @@ const Skeleton = ({ count }) => {
   );
 };
 
-const Products = ({ data, loading, count }) => {
+const Products = ({ data, loading = false, count = 4 }) => {
   return (
     <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 lg:gap-8 gap-3 container mx-auto">
       {loading ? (
